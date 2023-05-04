@@ -1,0 +1,803 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "1.2.1-file-sdsm",
+  "variables" : [ "spring-boot-admin-samples/spring-boot-admin-sample-discovery/src/main/java/de/codecentric/boot/admin/SpringBootAdminApplication.java", "spring-boot-admin-samples/spring-boot-admin-sample-hazelcast/src/main/java/de/codecentric/boot/admin/SpringBootAdminApplication.java", "spring-boot-admin-samples/spring-boot-admin-sample/src/main/java/de/codecentric/boot/admin/SpringBootAdminApplication.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/config/AdminServerWebConfiguration.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/config/EnableAdminServer.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/controller/RegistryController.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/event/ClientApplicationEvent.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/event/ClientApplicationRegisteredEvent.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/event/ClientApplicationUnregisteredEvent.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/ApplicationIdGenerator.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/ApplicationRegistry.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/HashingApplicationUrlIdGenerator.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/store/ApplicationStore.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/store/HazelcastApplicationStore.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/registry/store/SimpleApplicationStore.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java", "spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/zuul/ApplicationRouteRefreshListener.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/AdminApplicationHazelcastTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/AdminApplicationTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/config/AdminServerWebConfigurationTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/controller/RegistryControllerTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/discovery/ApplicationDiscoveryListenerTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/registry/ApplicationRegistryTest.java", "spring-boot-admin-server/src/test/java/de/codecentric/boot/admin/zuul/ApplicationRouteLocatorTest.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/actuate/LogfileMvcEndpoint.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/config/AdminClientProperties.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/config/AdminProperties.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/config/SpringBootAdminClientAutoConfiguration.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/model/Application.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/services/ApplicationRegistrator.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/services/RegistrationApplicationListener.java", "spring-boot-admin-starter-client/src/main/java/de/codecentric/boot/admin/web/BasicAuthHttpRequestInterceptor.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/actuate/LogfileMvcEndpointTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/config/AdminClientPropertiesTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/config/SpringBootAdminClientAutoConfigurationTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/model/ApplicationTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/services/ApplicationRegistratorTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/services/RegistrationApplicationListenerTest.java", "spring-boot-admin-starter-client/src/test/java/de/codecentric/boot/admin/web/BasicAuthHttpRequestInterceptorTest.java" ],
+  "cells" : [ {
+    "src" : 24,
+    "dest" : 16,
+    "values" : {
+      "Call" : 1.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 30,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 4.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 26,
+    "values" : {
+      "Call" : 35.0,
+      "Create" : 10.0,
+      "Parameter" : 2.0,
+      "Contain" : 9.0
+    }
+  }, {
+    "src" : 15,
+    "dest" : 13,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 5,
+    "values" : {
+      "Call" : 21.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 11,
+    "values" : {
+      "Call" : 17.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 29,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 3,
+    "values" : {
+      "Call" : 4.0,
+      "Create" : 2.0,
+      "Use" : 1.0,
+      "Contain" : 2.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 28,
+    "values" : {
+      "Use" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 6,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 3.0
+    }
+  }, {
+    "src" : 11,
+    "dest" : 9,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 11,
+    "dest" : 13,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 11,
+    "dest" : 8,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 29,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Create" : 2.0
+    }
+  }, {
+    "src" : 14,
+    "dest" : 13,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 29,
+    "values" : {
+      "Call" : 16.0,
+      "Import" : 1.0,
+      "Create" : 12.0,
+      "Use" : 5.0,
+      "Parameter" : 5.0,
+      "Contain" : 7.0
+    }
+  }, {
+    "src" : 11,
+    "dest" : 10,
+    "values" : {
+      "Call" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 16,
+    "dest" : 29,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 17,
+    "dest" : 16,
+    "values" : {
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 11,
+    "values" : {
+      "Call" : 8.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 5,
+    "dest" : 11,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 7,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Return" : 3.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 19,
+    "dest" : 4,
+    "values" : {
+      "Import" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 15,
+    "values" : {
+      "Cast" : 2.0,
+      "Call" : 2.0,
+      "Import" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 14,
+    "values" : {
+      "Cast" : 1.0,
+      "Call" : 1.0,
+      "Import" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 13,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 3.0
+    }
+  }, {
+    "src" : 18,
+    "dest" : 29,
+    "values" : {
+      "Call" : 7.0,
+      "Import" : 1.0,
+      "Create" : 3.0,
+      "Use" : 7.0,
+      "Parameter" : 6.0,
+      "Contain" : 3.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 15,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 6,
+    "values" : {
+      "Call" : 9.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 27,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 26,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 18,
+    "dest" : 4,
+    "values" : {
+      "Import" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 7,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0
+    }
+  }, {
+    "src" : 0,
+    "dest" : 4,
+    "values" : {
+      "Import" : 1.0,
+      "Annotation" : 1.0
+    }
+  }, {
+    "src" : 1,
+    "dest" : 4,
+    "values" : {
+      "Import" : 1.0,
+      "Annotation" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 29,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Use" : 4.0,
+      "Create" : 2.0
+    }
+  }, {
+    "src" : 17,
+    "dest" : 7,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 15,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 26,
+    "values" : {
+      "Call" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 2.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 29,
+    "values" : {
+      "Call" : 17.0,
+      "Import" : 1.0,
+      "Create" : 11.0,
+      "Use" : 2.0,
+      "Parameter" : 2.0,
+      "Contain" : 6.0
+    }
+  }, {
+    "src" : 38,
+    "dest" : 30,
+    "values" : {
+      "Call" : 15.0,
+      "Use" : 5.0,
+      "Contain" : 5.0
+    }
+  }, {
+    "src" : 38,
+    "dest" : 31,
+    "values" : {
+      "Call" : 10.0,
+      "Create" : 5.0,
+      "Contain" : 5.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 27,
+    "values" : {
+      "Call" : 4.0,
+      "Use" : 1.0,
+      "Parameter" : 4.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 25,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 27,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 10,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 30,
+    "values" : {
+      "Call" : 5.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 5,
+    "dest" : 29,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 3.0
+    }
+  }, {
+    "src" : 15,
+    "dest" : 29,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Return" : 3.0,
+      "Use" : 2.0,
+      "Parameter" : 3.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 30,
+    "values" : {
+      "Call" : 2.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 19,
+    "dest" : 29,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Use" : 2.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 29,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 15,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 4,
+    "values" : {
+      "Import" : 1.0,
+      "Annotation" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 31,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 32,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 25,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 3.0
+    }
+  }, {
+    "src" : 38,
+    "dest" : 27,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 30,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0,
+      "Parameter" : 2.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 29,
+    "values" : {
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 39,
+    "dest" : 32,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 16,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 17,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 6,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 5,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0,
+      "Use" : 2.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 9,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 8,
+    "values" : {
+      "Call" : 5.0,
+      "Import" : 1.0,
+      "Create" : 5.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 26,
+    "values" : {
+      "Call" : 4.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 29,
+    "values" : {
+      "Call" : 25.0,
+      "Use" : 4.0,
+      "Create" : 3.0,
+      "Contain" : 5.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 27,
+    "values" : {
+      "Call" : 4.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 25,
+    "values" : {
+      "Call" : 9.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 14,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 3,
+    "values" : {
+      "Use" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 15,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 13,
+    "values" : {
+      "Import" : 1.0,
+      "Return" : 2.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 11,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 11,
+    "dest" : 29,
+    "values" : {
+      "Call" : 16.0,
+      "Import" : 1.0,
+      "Return" : 3.0,
+      "Create" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 3.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 29,
+    "values" : {
+      "Call" : 8.0,
+      "Import" : 1.0,
+      "Contain" : 2.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 10,
+    "values" : {
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Create" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 2.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 29,
+    "values" : {
+      "Call" : 2.0,
+      "Import" : 1.0,
+      "Return" : 1.0,
+      "Use" : 4.0,
+      "Create" : 1.0,
+      "Parameter" : 2.0,
+      "Contain" : 2.0
+    }
+  }, {
+    "src" : 14,
+    "dest" : 29,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Return" : 3.0,
+      "Use" : 1.0,
+      "Parameter" : 2.0
+    }
+  }, {
+    "src" : 16,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 11,
+    "values" : {
+      "Call" : 3.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Contain" : 1.0
+    }
+  } ]
+}
